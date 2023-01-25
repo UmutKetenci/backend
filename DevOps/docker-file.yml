@@ -1,0 +1,13 @@
+  eybis-db-dev:
+    container_name: test-db-container
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD : password
+      POSTGRES_DB: umut_db
+    command:
+      - "postgres"
+      - "-c"
+      - "wal_level=logical"
+    ports:
+      - "5435:5432"
